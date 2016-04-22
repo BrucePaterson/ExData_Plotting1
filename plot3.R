@@ -10,8 +10,8 @@ dat <- subset(dat,Date == "2007-02-01" | Date == "2007-02-02")
 dat[,2]<-as.POSIXct(paste(dat$Date,dat$Time))
 
 ##PLOT 3
-with(dat, plot(dat$Global_active_power~dat$Time, data = dat, ylab = "Energy sub metering", type = "n"))
-with(dat,plot(Time, Sub_metering_1, type = "l", xlab = "",ylab = "", col = "black"))
+##with(dat, plot(dat$Global_active_power~dat$Time, data = dat, ylab = "Energy sub metering", type = "n"))
+with(dat,plot(Time, Sub_metering_1, type = "l", xlab = "",ylab = "Energy sub metering", col = "black"))
 with(dat, lines(Time, Sub_metering_2, col = "red"))
 with(dat, lines(Time, Sub_metering_3, col = "blue"))
 legend("topright", lty = 1, col = c("black","red", "blue"), legend = c(names(dat)[7:9]))
